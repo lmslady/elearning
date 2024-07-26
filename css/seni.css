@@ -1,0 +1,230 @@
+:root {
+  --primary: #995b2f;
+  --bgg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bgg);
+  color: #fff;
+  /* min-height: 3000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+/* Hero sections */
+.hero {
+  min-height: 100vh;
+  background-image: url(../img/bali/bali.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+}
+
+/* .hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 10%,
+    rgba(255, 255, 255, 0) 50%
+  );
+} */
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 100vw;
+}
+
+.hero .content h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #010101;
+  text-shadow: 1px, 1px, 3px rgba(1, 1, 3, 10);
+  line-height: 1.2;
+}
+
+.hero .content h3 {
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px, 1px, 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta a:hover {
+  background-color: var(--primary);
+  color: #010101;
+}
+
+/* Arrow */
+
+/* .arrow {
+  text-align: left;
+  padding-left: 17px;
+}
+
+.arrow:before {
+  content: "→";
+  position: absolute;
+  color: #383736;
+  left: 83%;
+  opacity: 0;
+}
+
+.arrow:hover:before {
+  left: 84%;
+  opacity: 1;
+}
+
+.arrow:hover {
+  width: 170px;
+} */
+
+/* pdf */
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pdf {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+}
+/* pdf end */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bgg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+}
+
+/* HP */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
